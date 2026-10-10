@@ -7,13 +7,13 @@
 
 /* 2. Color Variables */
 :root {
-    --bg: #0b0b16;
-    --card: #141426;
-    --purple: #a78bfa;
-    --pink: #f0abfc;
-    --white: #f5f3ff;
-    --muted: #aaa8c2;
-    --border: rgba(167, 139, 250, 0.22);
+    --bg: #0b1710;
+    --card: #14251a;
+    --purple: #65d98b;
+    --pink: #f5d547;
+    --white: #f4fff5;
+    --muted: #b4c7b7;
+    --border: rgba(101, 217, 139, 0.22);
 }
 
 /* 3. Reset */
