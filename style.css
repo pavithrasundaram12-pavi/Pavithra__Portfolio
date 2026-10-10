@@ -1,413 +1,185 @@
-/* ===== GLOBAL STYLES ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-:root {
-    --bg: #080b18;
-    --card: #11172b;
-    --primary: #8b5cf6;
-    --secondary: #22d3ee;
-    --text: #f1f5f9;
-    --muted: #a6b0c3;
-}
+    <title>Pavithra S | Developer Portfolio</title>
+    <meta name="description" content="Pavithra S - Computer Science Engineering student, aspiring Python developer and AI enthusiast.">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background:
-        radial-gradient(ellipse at 15% 10%, #25164b 0%, transparent 35%),
-        radial-gradient(ellipse at 90% 45%, #0b3445 0%, transparent 30%),
-        var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    overflow-x: hidden;
-}
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Pavi<span>.</span></a>
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-::selection {
-    background: var(--primary);
-    color: white;
-}
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
 
-/* ===== NAVBAR ===== */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(8, 11, 24, 0.85);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(139, 92, 246, 0.25);
-}
+                <h1>Hi, I'm <span>Pavithra S</span></h1>
 
-.navbar {
-    max-width: 1150px;
-    margin: auto;
-    padding: 18px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
+                <h2>Aspiring <span id="typing">Python Developer</span></h2>
 
-.logo {
-    font-size: 27px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
+                <p class="hero-description">
+                    I'm a Computer Science Engineering student passionate
+                    about Python, Artificial Intelligence, and building
+                    meaningful technology solutions.
+                </p>
 
-.logo span {
-    color: var(--secondary);
-}
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Projects ↗
+                    </a>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+                </div>
 
-.nav-links a {
-    color: var(--muted);
-    font-size: 14px;
-    transition: 0.3s;
-}
+                <div class="social-links">
+                    <a href="https://github.com/pavithrasundaram12"
+                       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/"
+                       target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="mailto:pavithrasundaram12@gmail.com">Email ↗</a>
+                </div>
+            </div>
 
-.nav-links a:hover {
-    color: var(--secondary);
-}
+            <div class="hero-visual">
+                <div class="photo-glow">
+                    <div class="photo-ring">
+                        <img
+                            src="./WhatsApp%20Image%202026-08-02%20at%2012.22.26%20PM.jpeg"
+                            alt="Pavithra S profile photo"
+                            class="profile-photo"
+                        >
+                    </div>
+                </div>
 
-/* ===== HERO SECTION ===== */
-.hero {
-    min-height: 88vh;
-    max-width: 1100px;
-    margin: auto;
-    padding: 110px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-}
+                <div class="floating-card">
+                    <span class="status-dot"></span>
+                    Learning. Building. Growing.
+                </div>
+            </div>
+        </section>
 
-.tagline {
-    color: var(--secondary);
-    border: 1px solid rgba(34, 211, 238, 0.35);
-    background: rgba(34, 211, 238, 0.07);
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    margin-bottom: 25px;
-}
+        <section class="section about" id="about">
+            <p class="eyebrow">GET TO KNOW ME</p>
+            <h2 class="section-title">About <span>Me</span></h2>
 
-.hero h1 {
-    font-size: clamp(42px, 7vw, 76px);
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: -2px;
-    margin-bottom: 18px;
-}
+            <div class="about-card">
+                <p>
+                    I am a B.E. Computer Science Engineering student who
+                    enjoys programming, solving coding challenges, and
+                    exploring Artificial Intelligence and Machine Learning.
+                    I am continuously developing my technical skills through
+                    hands-on projects and practice.
+                </p>
+                <p>
+                    My goal is to become a skilled software developer,
+                    gain industry experience, and build technology that
+                    solves real-world problems.
+                </p>
+            </div>
+        </section>
 
-.hero h1 span {
-    background: linear-gradient(100deg, #a78bfa, #22d3ee);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    filter: drop-shadow(0 0 22px rgba(139, 92, 246, 0.3));
-}
+        <section class="section" id="skills">
+            <p class="eyebrow">WHAT I WORK WITH</p>
+            <h2 class="section-title">My <span>Skills</span></h2>
 
-.hero h2 {
-    font-size: clamp(23px, 4vw, 35px);
-    color: #c4b5fd;
-    margin-bottom: 18px;
-}
+            <div class="skills-grid">
+                <div class="skill-card"><span>01</span> Python</div>
+                <div class="skill-card"><span>02</span> HTML & CSS</div>
+                <div class="skill-card"><span>03</span> Java</div>
+                <div class="skill-card"><span>04</span> SQL & DBMS</div>
+                <div class="skill-card"><span>05</span> Git & GitHub</div>
+                <div class="skill-card"><span>06</span> AI & Machine Learning</div>
+            </div>
+        </section>
 
-.intro {
-    color: var(--muted);
-    max-width: 650px;
-    font-size: 16px;
-}
+        <section class="section" id="projects">
+            <p class="eyebrow">THINGS I'VE BUILT</p>
+            <h2 class="section-title">Featured <span>Projects</span></h2>
 
-.hero-buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 32px;
-}
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-number">PROJECT 01</div>
+                    <h3>Research Evaluation System</h3>
+                    <p>
+                        A web application prototype that processes research
+                        paper PDFs and generates evaluation reports.
+                    </p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>PDF</span>
+                    </div>
+                </article>
 
-/* ===== BUTTONS ===== */
-.btn {
-    display: inline-block;
-    padding: 13px 24px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 14px;
-    color: white;
-    background: linear-gradient(120deg, #7c3aed, #4f46e5);
-    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.28);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+                <article class="project-card">
+                    <div class="project-number">PROJECT 02</div>
+                    <h3>AI Silent Emergency Detection</h3>
+                    <p>
+                        A prototype exploring computer vision and audio
+                        features to identify possible emergency situations.
+                    </p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>Streamlit</span>
+                    </div>
+                </article>
 
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.45);
-}
+                <article class="project-card">
+                    <div class="project-number">PROJECT 03</div>
+                    <h3>AI-Driven Firewall</h3>
+                    <p>
+                        A machine learning prototype that classifies network
+                        traffic and displays security insights on a dashboard.
+                    </p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-.btn.secondary {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(34, 211, 238, 0.45);
-    box-shadow: none;
-}
+        <section class="section contact" id="contact">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2 class="section-title">Have an opportunity? <span>Let's talk.</span></h2>
 
-.btn.secondary:hover {
-    background: rgba(34, 211, 238, 0.1);
-}
+            <p>
+                I'm open to learning opportunities, internships,
+                collaborations, and connecting with fellow developers.
+            </p>
 
-/* ===== COMMON SECTIONS ===== */
-.section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 85px 25px;
-}
+            <a class="btn btn-primary"
+               href="mailto:pavithrasundaram12@gmail.com">
+                Get in Touch ↗
+            </a>
+        </section>
+    </main>
 
-.section > h2 {
-    text-align: center;
-    font-size: clamp(30px, 5vw, 43px);
-    font-weight: 800;
-    margin-bottom: 35px;
-    background: linear-gradient(100deg, #c4b5fd, #67e8f9);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
+    <footer class="footer">
+        <p>Designed & built by Pavithra S · © 2026</p>
+        <a href="#home">Back to top ↑</a>
+    </footer>
 
-.section > p {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--muted);
-    font-size: 16px;
-}
-
-/* ===== ABOUT ME 3D CARD ===== */
-#about > p {
-    background: linear-gradient(
-        145deg,
-        rgba(30, 41, 75, 0.88),
-        rgba(17, 23, 43, 0.92)
-    );
-    padding: 35px;
-    border-radius: 22px;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    box-shadow:
-        12px 12px 30px rgba(0, 0, 0, 0.25),
-        -5px -5px 25px rgba(139, 92, 246, 0.06);
-    transition: transform 0.35s, border-color 0.35s;
-}
-
-#about > p:hover {
-    transform: perspective(900px) rotateX(2deg) translateY(-5px);
-    border-color: rgba(34, 211, 238, 0.6);
-}
-
-/* ===== SKILLS 3D CARDS ===== */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-    gap: 20px;
-    perspective: 1000px;
-}
-
-.skills-container span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px;
-    padding: 20px 12px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 15px;
-    color: #e9e7ff;
-    background: linear-gradient(145deg, #19213d, #0e1325);
-    border: 1px solid rgba(139, 92, 246, 0.35);
-    border-radius: 18px;
-    box-shadow:
-        8px 8px 18px rgba(0, 0, 0, 0.3),
-        inset 1px 1px 0 rgba(255, 255, 255, 0.04);
-    transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
-}
-
-.skills-container span:hover {
-    transform: perspective(700px) rotateY(8deg) rotateX(5deg) translateY(-8px);
-    border-color: var(--secondary);
-    box-shadow: 0 15px 30px rgba(34, 211, 238, 0.12);
-    color: var(--secondary);
-}
-
-/* ===== PROJECT CARDS ===== */
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    perspective: 1200px;
-}
-
-.project-card {
-    position: relative;
-    overflow: hidden;
-    padding: 30px;
-    min-height: 230px;
-    background: linear-gradient(145deg, #18213d, #0e1325);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 22px;
-    box-shadow: 10px 12px 25px rgba(0, 0, 0, 0.25);
-    transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
-}
-
-.project-card::before {
-    content: "";
-    position: absolute;
-    top: -65px;
-    right: -65px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: rgba(139, 92, 246, 0.18);
-    filter: blur(12px);
-    transition: 0.35s;
-}
-
-.project-card:hover {
-    transform: perspective(900px) rotateY(-3deg) rotateX(3deg) translateY(-9px);
-    border-color: rgba(34, 211, 238, 0.65);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-}
-
-.project-card:hover::before {
-    background: rgba(34, 211, 238, 0.22);
-}
-
-.project-card h3 {
-    position: relative;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    color: #ddd6fe;
-}
-
-.project-card p {
-    position: relative;
-    color: var(--muted);
-    font-size: 14px;
-    margin-bottom: 22px;
-}
-
-.project-tech {
-    position: relative;
-    display: inline-block;
-    color: var(--secondary);
-    background: rgba(34, 211, 238, 0.08);
-    border: 1px solid rgba(34, 211, 238, 0.18);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-}
-
-/* ===== CONTACT ===== */
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 28px;
-}
-
-.contact-links a {
-    padding: 12px 22px;
-    border-radius: 12px;
-    background: linear-gradient(145deg, #18213d, #0e1325);
-    border: 1px solid rgba(139, 92, 246, 0.4);
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.contact-links a:hover {
-    transform: translateY(-5px);
-    color: var(--secondary);
-    border-color: var(--secondary);
-    box-shadow: 0 10px 25px rgba(34, 211, 238, 0.1);
-}
-
-/* ===== FOOTER ===== */
-footer {
-    padding: 25px 20px;
-    text-align: center;
-    color: var(--muted);
-    background: rgba(4, 7, 17, 0.75);
-    border-top: 1px solid rgba(139, 92, 246, 0.18);
-    font-size: 13px;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 700px) {
-    .navbar {
-        flex-direction: column;
-        padding: 16px;
-    }
-
-    .nav-links {
-        justify-content: center;
-        gap: 12px 18px;
-    }
-
-    .hero {
-        min-height: auto;
-        padding: 85px 22px;
-    }
-
-    .hero h1 {
-        letter-spacing: -1px;
-    }
-
-    .section {
-        padding: 60px 20px;
-    }
-
-    #about > p {
-        padding: 24px;
-    }
-
-    .project-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 13px;
-    }
-
-    .skills-container span {
-        min-height: 85px;
-        font-size: 13px;
-    }
-}
-
-/* ===== ACCESSIBILITY ===== */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>
