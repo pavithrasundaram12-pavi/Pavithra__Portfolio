@@ -1,30 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Display the current year in the footer
-    const yearElement = document.getElementById("year");
+const typingElement = document.getElementById("typing");
 
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
+const roles = [
+    "Python Developer",
+    "AI Enthusiast",
+    "Software Developer"
+];
 
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll(
-        '.nav-links a[href^="#"]'
-    );
+let roleIndex = 0;
 
-    navLinks.forEach(function (link) {
-        link.addEventListener("click", function (event) {
-            const targetId = link.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
+function changeRole() {
+    if (!typingElement) return;
 
-            if (targetSection) {
-                event.preventDefault();
+    typingElement.textContent = roles[roleIndex];
+    roleIndex = (roleIndex + 1) % roles.length;
+}
 
-                targetSection.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    console.log("Pavithra's portfolio is ready!");
-});
+changeRole();
+setInterval(changeRole, 2500);
